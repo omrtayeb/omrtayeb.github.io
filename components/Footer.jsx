@@ -1,0 +1,12 @@
+function Footer() {
+  return (
+    <>
+      <footer className="footer">
+        <div className="footer-adress"><p>Manchester, Uk</p></div>
+        <div className="footer-copyright"><p>© Copyright 2k24. Made by me</p></div>
+      </footer>
+    </>
+  );
+}
+
+export default Footer;

@@ -1,0 +1,14 @@
+@use '../variables';
+.footer{
+    display: flex;    
+    font-size: 1.5rem;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: solid 1px variables.$on-background;
+    margin: 4rem 0;
+    padding:2rem 0; 
+    &-adress{
+
+    }
+}
+

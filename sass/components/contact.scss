@@ -1,0 +1,43 @@
+$on-background: #abb2bf;
+
+.contact {
+  margin: 3rem 0;
+  &__title {
+    margin: 2rem 0;
+  }
+  &__content {
+    display: flex;
+    flex-direction: row;
+
+    &-paragraph {
+      font-size: 2rem;
+      width: 60%;
+    }
+    &-form {
+      width: 25%;
+      margin: auto;
+      padding: 2rem;
+      border: 0.1rem solid $on-background;
+      &-title {
+        font-size: 2rem;
+        font-weight: bold;
+      }
+      &-item {
+        margin: 2rem 0;
+        width: 100%;
+        font-size: rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        &:hover {
+          color: white;
+          cursor: pointer;
+        }
+        p {
+          font-size: 2rem;
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+}

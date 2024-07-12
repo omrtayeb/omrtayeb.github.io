@@ -1,8 +1,10 @@
+import Contact from "../components/Contact.jsx"
 import Header from "../components/Header"
 import Landing from "../components/Landing.jsx"
 import MediaHeader from "../components/MediaHeader.jsx"
 import Quote from "../components/Quote.jsx"
 import Skills from "../components/Skills.jsx"
+import Footer from "../components/Footer.jsx"
 
 function App() {
 
@@ -14,6 +16,8 @@ function App() {
         <Landing/>
         <Quote/>
         <Skills/>
+        <Contact/>
+        <Footer/>
       </div>
       </div>
     </>

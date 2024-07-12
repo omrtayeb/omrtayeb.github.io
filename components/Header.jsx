@@ -4,7 +4,10 @@ function Header() {
       <header className="header-container">
         <div className="header-container__logo">
           <div className="header__item">
-            <p>Tayeb</p>
+          <img
+              src="../res/moon.svg"
+              alt="discord"
+            />
           </div>
         </div>
         <nav className="header-container__links header__links">
@@ -12,7 +15,7 @@ function Header() {
             <a href="#home"><span className="hashTag">#</span>home</a>
           </p>
           <p className="header__links-item">
-            <a href="#about-me"><span className="hashTag">#</span>about me</a>
+            <a href="#about-me"><span className="hashTag">#</span>blogposts</a>
           </p>
           <p className="header__links-item">
             <a href="#works"><span className="hashTag">#</span>works</a>

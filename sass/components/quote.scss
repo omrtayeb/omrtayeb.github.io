@@ -1,0 +1,44 @@
+@use '../variables';
+.quote_container {
+    display: flex;
+    width: 100%;
+    margin: 8rem 0;
+    justify-content: center;
+  }
+  .quote {
+    display: inline-flex;
+    flex-direction: column;
+  
+    position: relative;
+    &__text {
+      border: 1px solid variables.$on-background;
+      padding: 2rem;
+      font-size: 2rem;
+      &::before {
+        content: '"';
+        position: absolute;
+        color: var(--gray);
+        font-size: 64px;
+        font-weight: 700;
+        top: -2.5rem;
+        left: 0.5rem;
+      }
+      &::after {
+        content: '"';
+        position: absolute;
+        // color: var(--gray);
+        font-size: 64px;
+  
+        font-weight: 700;
+        top: 3.5rem;
+        right: 0.2rem;
+      }
+    }
+    &__author {
+      border: 1px solid variables.$on-background;
+      border-top: none;
+      padding: 0.6rem;
+      align-self: flex-end;
+    }
+  }
+  

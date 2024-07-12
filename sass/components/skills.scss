@@ -1,0 +1,49 @@
+@use '../variables';
+.skill--section {
+    position: relative; // Ensure the parent is positioned relatively
+    // background-color: red;
+    margin: 3rem 0;
+  
+    &__animated {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0; // Ensure it is behind other content
+    }
+  
+    &__tables {
+        
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+      position: relative; // Ensure the tables are above the background
+    //   background-color: rgb(89, 0, 255);
+      z-index: 1; // Ensure it is above the background
+    }
+  }
+  
+
+
+  
+.table{
+  display: inline-block;
+  min-width:20rem;
+  max-width: 30rem;
+  
+  border: solid 1px variables.$on-background;
+  &--header{
+    font-size: 2.5rem;
+    color: variables.$on-background;
+    padding: 1.2rem;
+    
+    border-bottom: solid variables.$on-background 1px;
+  }
+  &--content{
+    font-size: 1.5rem;
+    color: variables.$on-background;
+    padding: 1.2rem;
+    line-height: 4rem;
+  }
+}
