@@ -6,7 +6,7 @@ function Contact() {
         <div className="contact__content-paragraph">
           Hey there! Im a freelance ninja on the hunt for new projects. If youve
           got something else in mind or just want to chat, drop me a message.
-          Lets embark on this adventure together!
+          Lets embark on this adventure together!!
         </div>
         <div className="contact__content-form">
           <p className="contact__content-form-title">Text me here:</p>
