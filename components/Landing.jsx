@@ -14,7 +14,7 @@ function Landing() {
           <a className="button button--primary">Get in Touch</a>
         </div>
         <div className="landing-graphic">
-          <img src="../res/herodark1.png" className="landing-graphic__img" alt="my photo" />
+          <img src="/herodark1.png" className="landing-graphic__img" alt="my photo" />
         </div>
       </div>
     </>
