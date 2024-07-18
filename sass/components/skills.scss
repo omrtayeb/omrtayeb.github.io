@@ -1,7 +1,7 @@
 @import '../variables';
+
 .skill--section {
-    position: relative; // Ensure the parent is positioned relatively
-    // background-color: red;
+    position: relative; 
     margin: 3rem 0;
   
     &__animated {
@@ -10,7 +10,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      z-index: 0; // Ensure it is behind other content
+      z-index: 0; 
     }
   
     &__tables {
@@ -18,9 +18,8 @@
         display: flex;
         gap: 2rem;
         flex-wrap: wrap;
-      position: relative; // Ensure the tables are above the background
-    //   background-color: rgb(89, 0, 255);
-      z-index: 1; // Ensure it is above the background
+      position: relative; 
+      z-index: 1; 
     }
   }
   
@@ -32,17 +31,17 @@
   min-width:20rem;
   max-width: 30rem;
   
-  border: dotted 1px $on-background;
+  border: dotted 1px var(--on-background);
   &--header{
     font-size: 2.5rem;
-    color: $on-background;
+    color: var(--on-background);
     padding: 1.2rem;
     
-    border-bottom: dotted $on-background 1.5px;
+    border-bottom: dotted var() 1.5px;
   }
   &--content{
     font-size: 1.5rem;
-    color: $on-background;
+    color: var(--on-background);
     padding: 1.2rem;
     line-height: 4rem;
   }

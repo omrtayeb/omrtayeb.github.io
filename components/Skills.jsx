@@ -3,7 +3,7 @@ import VectorAnimated from "./VectorAnimated";
 
 function Skills() {
   return (
-    <>
+    <div>
       <h2>Skills</h2>
 
       <div className="skill--section">
@@ -19,7 +19,7 @@ function Skills() {
           />
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

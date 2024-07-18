@@ -20,7 +20,7 @@
       min-width: 35%;
       margin: auto;
       padding: 2rem;
-      border: 0.1rem dotted $on-background;
+      border: 0.1rem dotted var(--on-background);
       &-title {
         font-size: 2rem;
         font-weight: bold;
@@ -32,9 +32,15 @@
         display: flex;
         flex-direction: row;
         align-items: center;
+        svg{
+          fill: var(--on-background);
+        }
         &:hover {
           color: white;
           cursor: pointer;
+          svg{
+            fill: var(--on-background-focus);
+          }
         }
         p {
           font-size: 2rem;

@@ -4,9 +4,9 @@ function Quote() {
       <div className="quote_container">
         <figure className="quote">
           <blockquote className="quote__text">
-            With great power comes great electricity bill
+          sometimes science is more art than science, morty.
           </blockquote>
-          <figcaption className="quote__author">Dr. Who</figcaption>
+          <figcaption className="quote__author">~ rick ‌</figcaption>
         </figure>
       </div>
     </>

@@ -29,7 +29,7 @@
 
     align-self: flex-end;
     aspect-ratio: 1;
-    border-bottom: 1px dotted $primary-color;
+    border-bottom: 1px dotted var(primary-color);
   }
   @include respond-to(small) {
 
@@ -46,7 +46,7 @@
 
       align-self: flex-end;
       aspect-ratio: 1;
-      border-bottom: 1px dotted $primary-color;
+      border-bottom: 1px dotted var(--primary-color);
     }
   }
 }

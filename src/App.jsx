@@ -10,16 +10,16 @@ import BottomNav from "../components/BottomNav.jsx";
 function App() {
   return (
     <>
-        <MediaHeader />
-        <div className="body-main--screen">
-          <Header />
-          <Landing />
-          <Quote />
-          <Skills />
-          <Contact />
-          <Footer />
-          <BottomNav />
-        </div>
+      <MediaHeader />
+      <div className="body-main--screen">
+        <Header />
+        <Landing />
+        <Quote />
+        <Skills />
+        <Contact />
+        <Footer />
+        <BottomNav />
+      </div>
     </>
   );
 }

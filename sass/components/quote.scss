@@ -11,7 +11,7 @@
   
     position: relative;
     &__text {
-      border: 1px dotted $on-background;
+      border: 1px dotted var(--on-background);
       padding: 2rem;
       font-size: 2rem;
       &::before {
@@ -35,7 +35,7 @@
       }
     }
     &__author {
-      border: 1px dotted $on-background;
+      border: 1px dotted var(--on-background);
       border-top: none;
       padding: 0.6rem;
       align-self: flex-end;

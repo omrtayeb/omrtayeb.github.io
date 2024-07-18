@@ -5,7 +5,7 @@
   font-size: 1.5rem;
   flex-direction: row;
   justify-content: space-between;
-  border-top: solid 1px $on-background;
+  border-top: solid 1px var(--on-background);
   margin: 4rem 0;
   padding: 2rem 0;
   &-adress {
