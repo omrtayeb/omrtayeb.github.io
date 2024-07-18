@@ -1,4 +1,5 @@
-$on-background: #abb2bf;
+@import './../variables';
+@import './../mixin';
 
 .contact {
   margin: 3rem 0;
@@ -8,6 +9,7 @@ $on-background: #abb2bf;
   &__content {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 
     &-paragraph {
       font-size: 2rem;
@@ -15,9 +17,10 @@ $on-background: #abb2bf;
     }
     &-form {
       width: 25%;
+      min-width: 35%;
       margin: auto;
       padding: 2rem;
-      border: 0.1rem solid $on-background;
+      border: 0.1rem dotted $on-background;
       &-title {
         font-size: 2rem;
         font-weight: bold;
@@ -37,6 +40,23 @@ $on-background: #abb2bf;
           font-size: 2rem;
           margin-left: 1rem;
         }
+      }
+    }
+    
+  }
+  @include respond-to(medium) {
+    &__content {
+      flex-direction: column;
+
+      &-paragraph{
+        width: auto;
+      }
+      &-form {
+        margin-top: 4rem;
+        align-self: start;
+        width:auto ;
+        min-width: 70%;
+
       }
     }
   }

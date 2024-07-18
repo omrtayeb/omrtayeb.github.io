@@ -1,5 +1,5 @@
-@use "../variables";
 @use "../mixin";
+@import "../variables";
 
 
 .media-header {
@@ -17,7 +17,7 @@
   &__line {
     // position: fixed;
     width: 1px;
-    background-color: rgba($color: variables.$on-background, $alpha: 0.5);
+    background-color: rgba($color: $on-background, $alpha: 0.5);
     height: 30vh;
     display: inline-block;
   }

@@ -11,16 +11,8 @@ function Contact() {
         <div className="contact__content-form">
           <p className="contact__content-form-title">Text me here:</p>
           <div className="contact__content-form-item">
-            <a
-              href="https://x.com/omrtyyb"
-              className="media"
-              target="blank"
-            >
-              <img
-                src="twitter.svg"
-                alt="github"
-                className="media__icon"
-              />{" "}
+            <a href="https://x.com/omrtyyb" className="media" target="blank">
+              <img src="twitter.svg" alt="github" className="media__icon" />{" "}
             </a>
             <p>X</p>
           </div>
@@ -30,16 +22,10 @@ function Contact() {
               className="media"
               target="blank"
             >
-              <img
-                src="linkedin.svg"
-                alt="github"
-                className="media__icon"
-              />{" "}
+              <img src="linkedin.svg" alt="github" className="media__icon" />{" "}
             </a>
             <p>Linkedin</p>
-            
           </div>
-          
         </div>
       </div>
     </div>

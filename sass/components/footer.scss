@@ -1,14 +1,31 @@
-@use '../variables';
-.footer{
-    display: flex;    
-    font-size: 1.5rem;
-    flex-direction: row;
-    justify-content: space-between;
-    border-top: solid 1px variables.$on-background;
-    margin: 4rem 0;
-    padding:2rem 0; 
-    &-adress{
-
+@import "../mixin";
+@import "../variables";
+.footer {
+  display: flex;
+  font-size: 1.5rem;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: solid 1px $on-background;
+  margin: 4rem 0;
+  padding: 2rem 0;
+  &-adress {
+  }
+  @include respond-to(medium) {
+    display: flex;
+    flex-direction: column;
+    margin: 3rem 0;
+    padding: 0;
+    &-adress {
+        padding: 0;
+        // background-color: red;
     }
+    &-copyright{
+        // background-color: green;
+        
+        padding: 0;
+        margin: 0;
+        line-height: 0.5;
+        margin-bottom: 5rem;
+    }
+  }
 }
-

@@ -1,9 +1,27 @@
-// $background-color: #282c33;
-$primary-color: #fc6e0f;
-// $primary-color: #0ffcb5;
+// $background-color: #20262e;
+// $on-background: #abb2bf;
+// $primary-color: #fc6e0f;
+// $secondary-color: #0c8d00;
+// $on-background-focus: #ffffff;
 
-$on-background: #abb2bf;
-$on-background-focus: #ffffff;
-$background-color: #20262e;
+$font-family: "Fira Code", monospace;
 
+$gray: #abb2bf;
 
+// Dark Theme Variables
+$background-color-dark: #23202e;
+$on-background-dark: #abb2bf;
+$on-background-focus-dark: #ffffff;
+$primary-color-dark: #fc6e0f;
+
+// Light Theme Variables
+$background-color-light: #ffffff;
+$on-background-light: #333333;
+$on-background-focus-light: #df0404;
+$primary-color-light: #007bff;
+
+// Default to Dark Theme
+$background-color: $background-color-dark;
+$on-background: $on-background-dark;
+$on-background-focus: $on-background-focus-dark;
+$primary-color: $primary-color-dark;
