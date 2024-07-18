@@ -5,7 +5,7 @@ function Header() {
         <div className="header-container__logo">
           <div className="header__item">
           <img
-              src="../res/moon.svg"
+              src="moon.svg"
               alt="discord"
             />
           </div>

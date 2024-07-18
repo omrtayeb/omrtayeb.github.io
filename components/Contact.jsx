@@ -12,12 +12,12 @@ function Contact() {
           <p className="contact__content-form-title">Text me here:</p>
           <div className="contact__content-form-item">
             <a
-              href="https://github.com/omrtayeb"
+              href="https://x.com/omrtyyb"
               className="media"
               target="blank"
             >
               <img
-                src="../res/twitter.svg"
+                src="twitter.svg"
                 alt="github"
                 className="media__icon"
               />{" "}
@@ -26,12 +26,12 @@ function Contact() {
           </div>
           <div className="contact__content-form-item">
             <a
-              href="https://github.com/omrtayeb"
+              href="https://www.linkedin.com/in/omrtyyb/"
               className="media"
               target="blank"
             >
               <img
-                src="../res/linkedin.svg"
+                src="linkedin.svg"
                 alt="github"
                 className="media__icon"
               />{" "}

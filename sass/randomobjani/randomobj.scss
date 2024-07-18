@@ -1,6 +1,9 @@
+@use '../variables';
+
 $radius: 100px; // Adjusted to a fixed value for demonstration purposes
-$primary-animation-color: #fd480018;
-$secondary-animation-color: #fc6e0f09;
+$primary-animation-color: rgba(variables.$primary-color,0.05);
+$secondary-animation-color: rgba(variables.$primary-color,0.05);
+
 
 .animated {
   width: 100%;

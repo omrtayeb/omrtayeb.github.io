@@ -1,6 +1,7 @@
 .header-container {
+  position: fixed;
+  background-color: #20262e;
   font-size: 1.6rem;
-  margin-top: 1.5em;
   display: flex;
   width: 100%;
   flex-direction: row;
@@ -126,7 +127,7 @@
 }
 
 .flounder::before {
-  background: rgba(253, 72, 0, 0.0941176471);
+  background: rgba(252, 110, 15, 0.05);
   position: absolute;
   top: 0;
   left: 0;
@@ -143,7 +144,7 @@
 }
 
 .animation-wrapper.secondary .flounder::before {
-  background: rgba(252, 110, 15, 0.0352941176);
+  background: rgba(252, 110, 15, 0.05);
 }
 
 /* Media Queries and Keyframes remain the same */
@@ -314,6 +315,11 @@
   gap: 0.8rem;
   top: 0px;
 }
+@media (max-width: 600px) {
+  .media-header {
+    display: none;
+  }
+}
 .media-header__line {
   width: 1px;
   background-color: rgba(171, 178, 191, 0.5);
@@ -336,7 +342,24 @@
 html {
   font-size: 62.5%;
   overflow-y: auto;
-  filter: sepia(10%) saturate(120%);
+}
+@media (max-width: 600px) {
+  html {
+    font-size: 32.5%;
+    overflow-y: auto;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 40.5%;
+    overflow-y: auto;
+  }
+}
+@media (max-width: 1024px) {
+  html {
+    font-size: 50.5%;
+    overflow-y: auto;
+  }
 }
 
 body {
@@ -344,7 +367,7 @@ body {
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
-  background-color: #282c33;
+  background-color: #20262e;
   color: #abb2bf;
   overflow: hidden;
 }
@@ -356,9 +379,14 @@ a:focus {
 }
 
 .body-main--screen {
-  width: 75vw;
+  width: 70vw;
   max-width: 1024px;
   margin: 0 auto;
+}
+@media (max-width: 600px) {
+  .body-main--screen {
+    width: 95vw;
+  }
 }
 
 .hashTag {
@@ -405,6 +433,14 @@ h2::after {
   transform: translate(100%, -50%);
   right: -16px;
   top: 50%;
+}
+
+.media__icon:hover {
+  filter: brightness(200%);
+}
+
+.media__icon:active {
+  filter: brightness(40%);
 }
 
 /*# sourceMappingURL=index.css.map */
