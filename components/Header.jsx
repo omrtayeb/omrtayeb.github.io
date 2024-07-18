@@ -1,12 +1,17 @@
 import { useEffect, useState } from "react";
 
 function Header() {
-  const [darkMode, setDarkMode] = useState("dark");
+  const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)")
+
+  const [darkMode, setDarkMode] = useState(prefersDarkScheme.matches?'dark':'light');
 
   const clickHandler = () => {
+    
+    console.log(prefersDarkScheme.matches)
     const newMode = darkMode === "dark" ? "light" : "dark";
     setDarkMode(newMode);
-    console.log("button pressed", newMode);
+
+    console.log(prefersDarkScheme)
   };
 
   // Use useEffect to update the className on the body when darkMode changes
