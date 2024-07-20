@@ -1,25 +1,21 @@
-import Contact from "../components/Contact.jsx";
-import Header from "../components/Header";
-import Landing from "../components/Landing.jsx";
-import MediaHeader from "../components/MediaHeader.jsx";
-import Quote from "../components/Quote.jsx";
-import Skills from "../components/Skills.jsx";
-import Footer from "../components/Footer.jsx";
+import { useState } from "react";
 import BottomNav from "../components/BottomNav.jsx";
+import Screens from "./Screens.jsx";
+import MediaHeader from "../components/MediaHeader.jsx";
+import Header from "../components/Header.jsx";
 
 function App() {
+  const [screenName, setScreenName] = useState("home");
+
   return (
     <>
       <MediaHeader />
-      <div className="body-main--screen">
-        <Header />
-        <Landing />
-        <Quote />
-        <Skills />
-        <Contact />
-        <Footer />
-        <BottomNav />
-      </div>
+      <Header onSetScreenName={setScreenName} selectedScreenName={screenName} />
+      <Screens screenName={screenName} />
+      <BottomNav
+        onSetScreenName={setScreenName}
+        selectedScreenName={screenName} // Pass selectedScreenName to BottomNav
+      />
     </>
   );
 }

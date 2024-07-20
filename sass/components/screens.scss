@@ -1,0 +1,32 @@
+/* General styles for content */
+// .screen {
+//   transition: opacity 0.5s ease-in-out;
+//   opacity: 0;
+//   position: absolute;
+//   width: 100%;
+//   height: 100%;
+// }
+
+// /* To apply when the screen is active */
+// .screen.active {
+//   opacity: 1;
+// }
+
+// .screen-container {
+//   display: flex;
+//   flex-direction: column;
+//   height: 100vh; /* Full viewport height */
+//   overflow: hidden;
+// }
+
+// .screen {
+//   flex: 1 0 100%; /* Each screen takes up the full viewport height */
+//   overflow-y: auto; /* Allows scrolling within each screen if necessary */
+//   transition: opacity 0.5s ease-in-out;
+//   opacity: 0;
+// }
+
+// .screen.active {
+//   opacity: 1;
+// }
+

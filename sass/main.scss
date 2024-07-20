@@ -1,4 +1,6 @@
 @import "_variables";
+@import './components/scrollbars.scss';
+@import "./components/home-screen.scss";
 @import "./components/header.scss";
 @import "./components/landing.scss";
 @import "./components/quote.scss";
@@ -9,8 +11,10 @@
 @import "./typography";
 @import "./components/skills.scss";
 @import "./components/bottom-nav.scss";
+@import "./components/screens.scss";
+@import './components/blogpost-screen.scss';
+@import './components/case-studies.scss';
 @import "./mixin";
-
 
 :root {
   --background-color: #2c313a;
@@ -20,10 +24,9 @@
   --primary-color: #df610d;
 }
 
-
 body.dark {
   --background-color: #2c313a;
-  --background-color-variant: #000000;
+  --background-color-variant: #2a2631;
   --on-background: #abb2bf;
   --on-background-focus: #ffffff;
   --primary-color: #df610d;
@@ -47,19 +50,25 @@ body.light {
 
 html {
   font-size: 62.5%;
-  overflow-y: auto;
+  overflow-y: hidden;
 
   @include respond-to(small) {
     font-size: 32.5%;
-    overflow-y: auto;
+    // overflow-y: auto;
+  overflow-y: hidden;
+
   }
   @include respond-to(medium) {
     font-size: 40.5%;
-    overflow-y: auto;
+    overflow-y: hidden;
+
+    // overflow-y: auto;
   }
   @include respond-to(large) {
     font-size: 50.5%;
-    overflow-y: auto;
+    // overflow-y: auto;
+  overflow-y: hidden;
+
   }
 }
 
@@ -67,6 +76,8 @@ body {
   font-family: $font-family;
   font-optical-sizing: auto;
   font-weight: 300;
+  overflow-y: hidden;
+
   font-style: normal;
   line-height: 1.5;
   background-color: var(--background-color);
@@ -74,30 +85,6 @@ body {
   transition: background-color 0.1s ease, color 0.1s ease;
 }
 
-.body-main--screen {
-  transition: background-color 0.1s ease, color 0.1s ease;
-
-  background-color: var(--background-color);
-  // color: var(--primary-color);
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  // overflow-x: auto;
-  width: 70vw;
-  max-width: 1024px;
-  margin: 0 auto;
-  @include respond-to(small) {
-    width: 95vw;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    max-width: 1024px;
-    margin: 0 auto;
-    overflow: hidden;
-    // margin: 0 16px;
-    // padding: 16px;
-  }
-}
 
 .hashTag {
   color: var(--primary-color);
@@ -163,5 +150,17 @@ a:focus {
   text-decoration: none;
   &:hover {
     color: var(--primary-color);
+    background-color: var(--background-color-variant);
+    // padding: 5px;
+    border-radius: 5px;
+    transition: background-color 0.5s ease, color 0.5s ease-out;
+    // transition: width 0.3s ease, height 0.3s ease;
   }
+}
+
+.highlight {
+  background-color: var(--background-color-variant);
+  // padding: 5px;
+  border-radius: 2px;
+  transition: background-color 0.1s ease, color 0.1s ease;
 }

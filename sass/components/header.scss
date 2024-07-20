@@ -1,19 +1,54 @@
 @import "../variables";
 @import "../mixin";
 .header-container {
-  position: sticky; /* Use sticky instead of fixed */
-  top: 0;
-  background-color: var(--background-color);
-  z-index: 1000;
-  font-size: 1.6rem;
-  padding: 1.5rem;
-  display: flex;
-  width: 100%;
-  transition: background-color 0.1s ease, color 0.1s ease;
-  
-  box-sizing: border-box; 
-  justify-content: space-between;
-  align-content: center;
+
+    position: sticky;
+    top: 0;
+    background-color: var(--background-color);
+    z-index: 1000;
+    font-size: 1.6rem;
+    padding: 1.5rem;
+    display: flex;
+    margin: 0 auto;
+    width: 100%; /* Use full width */
+    max-width: 1024px;
+    transition: background-color 0.1s ease, color 0.1s ease;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center; /* Align items vertically centered */
+
+    width: 70vw;
+    max-width: 1024px;
+    @include respond-to(small) {
+      width: 95vw;
+      position: relative;
+      max-width: 1024px;
+      margin: 0 auto;
+
+    }
+  // position: sticky; /* Use sticky instead of fixed */
+  // top: 0;
+  // background-color: var(--background-color);
+  // // background-color: red;
+  // z-index: 1000;
+  // font-size: 1.6rem;
+  // padding: 1.5rem;
+  // display: flex;
+  // margin: 0 auto;
+  // width: 70vw;
+  // max-width: 1024px;
+  // transition: background-color 0.1s ease, color 0.1s ease;
+  // box-sizing: border-box;
+  // justify-content: space-between;
+  // align-content: center;
+  @include respond-to(small) {
+    width: 95vw;
+    max-width: 1024px;
+    margin: 0 auto;
+    overflow: hidden;
+    // margin: 0 16px;
+    // padding: 16px;
+  }
 
   &__logo {
     // background-color: red;
@@ -25,26 +60,26 @@
     justify-content: center;
     position: relative; // Needed for positioning of ::before
 
-      // Pseudo-element before
-      &::before {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 0;
-        height: 0;
-        background-color: var(--background-color-variant);
-        transition: width 0.3s ease, height 0.3s ease;
-        transform: translate(-50%, -50%);
-        border-radius: 10px;
-        z-index: -1; // Ensure it's behind the SVG
-      }
+    // Pseudo-element before
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      background-color: var(--background-color-variant);
+      transition: width 0.3s ease, height 0.3s ease;
+      transform: translate(-50%, -50%);
+      border-radius: 10px;
+      z-index: -1; // Ensure it's behind the SVG
+    }
 
-      // On hover of the link
-      &:hover::before {
-        width: 100%; // Adjust as needed
-        height: 100%; // Adjust as needed
-      }
+    // On hover of the link
+    &:hover::before {
+      width: 100%; // Adjust as needed
+      height: 100%; // Adjust as needed
+    }
   }
 
   &__links {
@@ -56,15 +91,11 @@
     @include respond-to(small) {
       display: none;
     }
-    
   }
 }
 
-.header__links-item{
-  a{
+.header__links-item {
+  a {
     // color: var(--primary-color);
   }
-  
 }
-
-
