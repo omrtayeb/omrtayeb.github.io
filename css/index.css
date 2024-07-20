@@ -3,6 +3,12 @@
   width: 12px; /* Width of the scrollbar */
   height: 12px; /* Height of the scrollbar for horizontal scrollbar */
 }
+@media (max-width: 600px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+}
 
 ::-webkit-scrollbar-track {
   background: var(--background-color); /* Background color of the track */
@@ -10,7 +16,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--primary-color); /* Color of the draggable part */
+  background: var(--background-color-variant); /* Color of the draggable part */
   border-radius: 10px; /* Rounded corners for the scrollbar thumb */
 }
 
@@ -24,11 +30,11 @@
 
 /* For light theme */
 body.light ::-webkit-scrollbar-track {
-  background: var(--background-color-variant); /* Match the background color */
+  background: var(--background-color); /* Match the background color */
 }
 
 body.light ::-webkit-scrollbar-thumb {
-  background: var(--primary-color); /* Match the primary color */
+  background: var(--background-color-variant); /* Match the primary color */
 }
 
 body.light ::-webkit-scrollbar-thumb:hover {
@@ -37,11 +43,11 @@ body.light ::-webkit-scrollbar-thumb:hover {
 
 /* For dark theme */
 body.dark ::-webkit-scrollbar-track {
-  background: var(--background-color-variant); /* Match the background color */
+  background: var(--background-color); /* Match the background color */
 }
 
 body.dark ::-webkit-scrollbar-thumb {
-  background: var(--primary-color); /* Match the primary color */
+  background: var(--background-color-variant); /* Match the primary color */
 }
 
 body.dark ::-webkit-scrollbar-thumb:hover {
@@ -97,10 +103,11 @@ body.dark ::-webkit-scrollbar-thumb:hover {
 }
 @media (max-width: 600px) {
   .header-container {
-    width: 95vw;
+    width: 100%;
     max-width: 1024px;
     margin: 0 auto;
     overflow: hidden;
+    padding: 1.5rem 1rem;
   }
 }
 .header-container__logo {
@@ -443,7 +450,7 @@ body.dark ::-webkit-scrollbar-thumb:hover {
   font-size: 1.5rem;
   flex-direction: row;
   justify-content: space-between;
-  border-top: solid 1px var(--on-background);
+  border-top: dashed 1px var(--on-background);
   margin: 4rem 0;
   margin-bottom: 8rem;
   padding: 2rem 0;
@@ -468,7 +475,7 @@ body.dark ::-webkit-scrollbar-thumb:hover {
 }
 @media (max-width: 600px) {
   .footer {
-    margin-bottom: 10rem;
+    margin-bottom: 20rem;
   }
 }
 

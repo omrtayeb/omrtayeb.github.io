@@ -5,7 +5,7 @@
   font-size: 1.5rem;
   flex-direction: row;
   justify-content: space-between;
-  border-top: solid 1px var(--on-background);
+  border-top: dashed 1px var(--on-background);
   margin: 4rem 0;
   margin-bottom: 8rem;
   padding: 2rem 0;
@@ -31,6 +31,6 @@
     }
   }
   @include respond-to(small) {
-    margin-bottom: 10rem;
+    margin-bottom: 20rem;
   }
 }

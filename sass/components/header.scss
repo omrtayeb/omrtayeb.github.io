@@ -42,10 +42,11 @@
   // justify-content: space-between;
   // align-content: center;
   @include respond-to(small) {
-    width: 95vw;
+    width: 100%;
     max-width: 1024px;
     margin: 0 auto;
     overflow: hidden;
+    padding: 1.5rem 1rem;
     // margin: 0 16px;
     // padding: 16px;
   }
