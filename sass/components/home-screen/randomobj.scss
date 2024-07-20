@@ -1,8 +1,8 @@
-@import '../variables';
+// @import '../variables';
 
 $radius: 100px; // Adjusted to a fixed value for demonstration purposes
-$primary-animation-color: rgba(var(--primary-color),0.05);
-$secondary-animation-color: rgba(var(--primary-color),0.05);
+$primary-animation-color: #6d6d6d0a;
+$secondary-animation-color: #6d6c6c0a;
 
 
 .animated {
@@ -20,6 +20,7 @@ $secondary-animation-color: rgba(var(--primary-color),0.05);
 }
 
 .flounder {
+  filter: opacity(20);
   width: $radius;
   height: $radius;
   position: absolute;
@@ -30,6 +31,8 @@ $secondary-animation-color: rgba(var(--primary-color),0.05);
 }
 
 .flounder::before {
+  filter: opacity(20);
+
   background: $primary-animation-color;
   // border-radius: 50%; // Corrected to 50% to make it a circle
   position: absolute;

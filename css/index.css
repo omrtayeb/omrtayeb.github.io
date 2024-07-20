@@ -1,3 +1,98 @@
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  margin: 1.5rem 0 1rem;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 3.6rem;
+}
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2.4rem;
+  }
+}
+
+h4 {
+  font-size: 2.4rem;
+}
+@media (max-width: 600px) {
+  h4 {
+    font-size: 1.8rem;
+  }
+}
+
+h5 {
+  font-size: 2rem;
+}
+@media (max-width: 600px) {
+  h5 {
+    font-size: 1.6rem;
+  }
+}
+
+h6 {
+  font-size: 1.6rem;
+}
+@media (max-width: 600px) {
+  h6 {
+    font-size: 1.4rem;
+  }
+}
+
+p {
+  font-size: 1.6rem;
+  margin: 1rem 0;
+}
+@media (max-width: 600px) {
+  p {
+    font-size: 1.4rem;
+  }
+}
+
+ul, ol {
+  margin: 1rem 0;
+  padding-left: 2rem;
+}
+ul li, ol li {
+  margin: 0.5rem 0;
+  font-size: 1.6rem;
+}
+@media (max-width: 600px) {
+  ul li, ol li {
+    font-size: 1.4rem;
+  }
+}
+
+code {
+  font-family: "Fira Code", monospace;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.3rem;
+}
+
+pre {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+}
+pre code {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 2rem 0;
+}
+.table th, .table td {
+  padding: 1rem;
+  border: 1px solid #abb2bf;
+}
+.table th {
+  text-align: left;
+}
 /* General Scrollbar Styling */
 ::-webkit-scrollbar {
   width: 12px; /* Width of the scrollbar */
@@ -284,6 +379,7 @@ body.dark ::-webkit-scrollbar-thumb:hover {
 }
 
 .flounder {
+  filter: opacity(20);
   width: 100px;
   height: 100px;
   position: absolute;
@@ -293,7 +389,8 @@ body.dark ::-webkit-scrollbar-thumb:hover {
 }
 
 .flounder::before {
-  background: rgba(var(--primary-color), 0.05);
+  filter: opacity(20);
+  background: rgba(109, 109, 109, 0.0392156863);
   position: absolute;
   top: 0;
   left: 0;
@@ -310,7 +407,7 @@ body.dark ::-webkit-scrollbar-thumb:hover {
 }
 
 .animation-wrapper.secondary .flounder::before {
-  background: rgba(var(--primary-color), 0.05);
+  background: rgba(109, 108, 108, 0.0392156863);
 }
 
 /* Media Queries and Keyframes remain the same */
@@ -540,101 +637,6 @@ body.dark ::-webkit-scrollbar-thumb:hover {
   fill: var(--on-background-focus);
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 500;
-  margin: 1.5rem 0 1rem;
-  line-height: 1.2;
-}
-
-h1 {
-  font-size: 3.6rem;
-}
-@media (max-width: 600px) {
-  h1 {
-    font-size: 2.4rem;
-  }
-}
-
-h4 {
-  font-size: 2.4rem;
-}
-@media (max-width: 600px) {
-  h4 {
-    font-size: 1.8rem;
-  }
-}
-
-h5 {
-  font-size: 2rem;
-}
-@media (max-width: 600px) {
-  h5 {
-    font-size: 1.6rem;
-  }
-}
-
-h6 {
-  font-size: 1.6rem;
-}
-@media (max-width: 600px) {
-  h6 {
-    font-size: 1.4rem;
-  }
-}
-
-p {
-  font-size: 1.6rem;
-  margin: 1rem 0;
-}
-@media (max-width: 600px) {
-  p {
-    font-size: 1.4rem;
-  }
-}
-
-ul, ol {
-  margin: 1rem 0;
-  padding-left: 2rem;
-}
-ul li, ol li {
-  margin: 0.5rem 0;
-  font-size: 1.6rem;
-}
-@media (max-width: 600px) {
-  ul li, ol li {
-    font-size: 1.4rem;
-  }
-}
-
-code {
-  font-family: "Fira Code", monospace;
-  padding: 0.2rem 0.4rem;
-  border-radius: 0.3rem;
-}
-
-pre {
-  padding: 1rem;
-  border-radius: 0.5rem;
-  overflow-x: auto;
-}
-pre code {
-  background: none;
-  padding: 0;
-  border-radius: 0;
-}
-
-.table {
-  border-collapse: collapse;
-  width: 100%;
-  margin: 2rem 0;
-}
-.table th, .table td {
-  padding: 1rem;
-  border: 1px solid #abb2bf;
-}
-.table th {
-  text-align: left;
-}
 .skill--section {
   position: relative;
   margin: 3rem 0;

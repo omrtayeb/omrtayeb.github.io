@@ -1,19 +1,19 @@
-@import "_variables";
-@import './components/scrollbars.scss';
-@import "./components/home-screen.scss";
-@import "./components/header.scss";
-@import "./components/landing.scss";
-@import "./components/quote.scss";
-@import "./randomobjani/randomobj.scss";
-@import "./components/contact.scss";
-@import "./components/footer.scss";
-@import "./components/mediaheader.scss";
 @import "./typography";
-@import "./components/skills.scss";
+@import "./variables";
+@import "./scrollbars.scss";
+@import "./components/home-screen/home-screen.scss";
+@import "./components/header.scss";
+@import "./components/home-screen/landing.scss";
+@import "./components/home-screen/quote.scss";
+@import "./components/home-screen/randomobj.scss";
+@import "./components/home-screen/contact.scss";
+@import "./components/home-screen/footer.scss";
+@import "./components/media-header.scss";
+@import "./components/home-screen/skills.scss";
 @import "./components/bottom-nav.scss";
 @import "./components/screens.scss";
-@import './components/blogpost-screen.scss';
-@import './components/case-studies.scss';
+@import "./components/blogpost-screen/blogpost-screen.scss";
+@import "./components/casestudies-screen/casestudies-screen.scss";
 @import "./mixin";
 
 :root {
@@ -55,8 +55,7 @@ html {
   @include respond-to(small) {
     font-size: 32.5%;
     // overflow-y: auto;
-  overflow-y: hidden;
-
+    overflow-y: hidden;
   }
   @include respond-to(medium) {
     font-size: 40.5%;
@@ -67,8 +66,7 @@ html {
   @include respond-to(large) {
     font-size: 50.5%;
     // overflow-y: auto;
-  overflow-y: hidden;
-
+    overflow-y: hidden;
   }
 }
 
@@ -84,7 +82,6 @@ body {
   color: var(--on-background);
   transition: background-color 0.1s ease, color 0.1s ease;
 }
-
 
 .hashTag {
   color: var(--primary-color);
