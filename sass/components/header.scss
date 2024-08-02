@@ -1,55 +1,38 @@
 @import "../variables";
 @import "../mixin";
 .header-container {
+  position: sticky;
+  top: 0;
+  background-color: var(--background-color);
+  z-index: 1000;
+  font-size: 1.6rem;
+  padding: 1.5rem;
+  display: flex;
+  margin: 0 auto;
+  width: 100%; /* Use full width */
+  max-width: 1028px;
+  transition: background-color 0.1s ease, color 0.1s ease;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center; /* Align items vertically centered */
+  // border-bottom: 1px dotted var(--on-background);
 
-    position: sticky;
-    top: 0;
-    background-color: var(--background-color);
-    z-index: 1000;
-    font-size: 1.6rem;
-    padding: 1.5rem;
-    display: flex;
-    margin: 0 auto;
-    width: 100%; /* Use full width */
-    max-width: 1024px;
-    transition: background-color 0.1s ease, color 0.1s ease;
-    box-sizing: border-box;
-    justify-content: space-between;
-    align-items: center; /* Align items vertically centered */
-
-    width: 70vw;
-    max-width: 1024px;
-    @include respond-to(small) {
-      width: 95vw;
-      position: relative;
-      max-width: 1024px;
-      margin: 0 auto;
-
-    }
-  // position: sticky; /* Use sticky instead of fixed */
-  // top: 0;
-  // background-color: var(--background-color);
-  // // background-color: red;
-  // z-index: 1000;
-  // font-size: 1.6rem;
-  // padding: 1.5rem;
-  // display: flex;
-  // margin: 0 auto;
-  // width: 70vw;
-  // max-width: 1024px;
-  // transition: background-color 0.1s ease, color 0.1s ease;
-  // box-sizing: border-box;
-  // justify-content: space-between;
-  // align-content: center;
+  width: 71vw;
+  max-width: 1024px;
   @include respond-to(small) {
-    width: 100%;
+    width: 95vw;
+    position: relative;
     max-width: 1024px;
     margin: 0 auto;
-    overflow: hidden;
-    padding: 1.5rem 1rem;
-    // margin: 0 16px;
-    // padding: 16px;
   }
+
+  // @include respond-to(small) {
+  //   width: 100%;
+  //   max-width: 1024px;
+  //   margin: 0 auto;
+  //   overflow: hidden;
+  //   padding: 1.5rem 1rem;
+  // }
 
   &__logo {
     // background-color: red;

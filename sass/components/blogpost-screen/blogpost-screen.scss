@@ -1,9 +1,135 @@
-.screen--blogposts{
-    // background-color: green;
-    // height: 3000px;
-    width: 100vw;
-    overflow-x: hidden;
-    overflow-y: scroll;
+/* Base styles */
+.blogpost-page {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--background-color);
+  color: var(--on-background);
 }
 
+/* Sidebar styles */
+.sidebar {
+  width: 25%;
+  background-color: var(--background-color-variant);
+  color: var(--on-background-focus);
+  padding: 2rem;
+  transition: transform 0.3s ease;
 
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin: 1rem 0;
+
+      a {
+        color: var(--on-background);
+        text-decoration: none;
+
+        &:hover {
+          color: var(--primary-color);
+        }
+      }
+    }
+  }
+}
+
+/* Content styles */
+.content {
+  width: 75%;
+  padding: 2rem;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--on-background-focus);
+  }
+
+  p {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+}
+
+/* Toggle button styles */
+.sidebar-toggle-label {
+  display: none;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  background-color: var(--primary-color);
+  color: var(--on-background-focus);
+  border: none;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  z-index: 1000;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+/* Hide the checkbox */
+#sidebar-toggle {
+  display: none;
+}
+
+/* Show sidebar when checkbox is checked */
+#sidebar-toggle:checked ~ .sidebar {
+  transform: translateX(0);
+}
+
+@include respond-to(small) {
+  .blogpost-page {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform: translateX(-100%);
+    z-index: 999;
+  }
+
+  .content {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .sidebar-toggle-label {
+    display: block;
+  }
+}
+/* Media queries */
+// @media (max-width: $mobile-breakpoint) {
+//   .blogpost-page {
+//     flex-direction: column;
+//   }
+
+//   .sidebar {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     height: 100%;
+//     width: 100%;
+//     transform: translateX(-100%);
+//     z-index: 999;
+//   }
+
+//   .content {
+//     width: 100%;
+//     padding: 1rem;
+//   }
+
+//   .sidebar-toggle-label {
+//     display: block;
+//   }
+// }

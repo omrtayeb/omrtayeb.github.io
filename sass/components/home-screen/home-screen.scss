@@ -1,24 +1,20 @@
+@import "./../../mixin";
 
-@import './../../mixin';
+// .body-main--screen {
+//   background-color: rgba(0, 128, 0, 0.116);
+//   position: relative;
+//   display: flex;
+//   flex-direction: column;
 
-.body-main--screen {
-    transition: background-color 0.1s ease, color 0.1s ease;
-    background-color: var(--background-color);
-    // background-color: green;
-    // position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 70vw;
-    max-width: 1024px;
-    margin: 0 auto;
-    @include respond-to(small) {
-      width: 95vw;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      max-width: 1024px;
-      margin: 0 auto;
-      overflow: hidden;
-    }
-  }
-  
+//   // height: 500%;
+//   // overflow: scroll;
+//   @include respond-to(small) {
+//     width: 100%;
+//     position: relative;
+//     display: flex;
+//     flex-direction: column;
+//     max-width: 1024px;
+//     margin: 0 auto;
+//     // overflow: hidden;
+//   }
+// }

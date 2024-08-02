@@ -149,27 +149,6 @@ body.dark ::-webkit-scrollbar-thumb:hover {
   background: var(--on-background-focus); /* Match the focus color */
 }
 
-.body-main--screen {
-  transition: background-color 0.1s ease, color 0.1s ease;
-  background-color: var(--background-color);
-  display: flex;
-  flex-direction: column;
-  width: 70vw;
-  max-width: 1024px;
-  margin: 0 auto;
-}
-@media (max-width: 600px) {
-  .body-main--screen {
-    width: 95vw;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    max-width: 1024px;
-    margin: 0 auto;
-    overflow: hidden;
-  }
-}
-
 .header-container {
   position: sticky;
   top: 0;
@@ -180,12 +159,12 @@ body.dark ::-webkit-scrollbar-thumb:hover {
   display: flex;
   margin: 0 auto;
   width: 100%; /* Use full width */
-  max-width: 1024px;
+  max-width: 1028px;
   transition: background-color 0.1s ease, color 0.1s ease;
   box-sizing: border-box;
   justify-content: space-between;
   align-items: center; /* Align items vertically centered */
-  width: 70vw;
+  width: 71vw;
   max-width: 1024px;
 }
 @media (max-width: 600px) {
@@ -194,15 +173,6 @@ body.dark ::-webkit-scrollbar-thumb:hover {
     position: relative;
     max-width: 1024px;
     margin: 0 auto;
-  }
-}
-@media (max-width: 600px) {
-  .header-container {
-    width: 100%;
-    max-width: 1024px;
-    margin: 0 auto;
-    overflow: hidden;
-    padding: 1.5rem 1rem;
   }
 }
 .header-container__logo {
@@ -267,7 +237,6 @@ body.dark ::-webkit-scrollbar-thumb:hover {
   min-width: 20rem;
   height: auto;
   margin: 0 auto;
-  margin-top: 4rem;
   filter: grayscale(100%) sepia(90%);
   align-self: flex-end;
   aspect-ratio: 1;
@@ -292,7 +261,6 @@ body.dark ::-webkit-scrollbar-thumb:hover {
 }
 
 .landing-content {
-  margin-top: 1rem;
   min-width: 40rem;
   display: flex;
   justify-content: space-between;
@@ -363,6 +331,43 @@ body.dark ::-webkit-scrollbar-thumb:hover {
   border-top: none;
   padding: 0.6rem;
   align-self: flex-end;
+}
+
+.screen-container {
+  width: 70vw;
+  max-width: 1024px;
+  margin: 0 auto;
+  position: absolute;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  flex: 1;
+  transform: translate(-50%, -50%);
+  padding-top: 8rem;
+}
+@media (max-width: 600px) {
+  .screen-container {
+    position: absolute;
+    flex: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    height: 100%;
+    padding-top: 4.5rem;
+  }
+}
+
+.screen_active {
+  opacity: 1;
+  display: block;
+  z-index: 1;
+}
+
+.screen_deactive {
+  opacity: 0;
+  display: none;
+  z-index: 1;
 }
 
 .animated {
@@ -573,7 +578,7 @@ body.dark ::-webkit-scrollbar-thumb:hover {
 }
 @media (max-width: 600px) {
   .footer {
-    margin-bottom: 20rem;
+    padding-bottom: 4rem;
   }
 }
 
@@ -681,12 +686,11 @@ body.dark ::-webkit-scrollbar-thumb:hover {
 }
 @media (max-width: 600px) {
   .btm-nav__container {
+    background-color: var(--background-color);
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: var(--background-color);
-    z-index: 1000;
     font-size: 1.6rem;
     padding: 1.5rem 3rem;
     display: flex;
@@ -698,23 +702,19 @@ body.dark ::-webkit-scrollbar-thumb:hover {
   }
 }
 
-/* General styles for content */
-.screen--blogposts {
-  width: 100vw;
-  overflow-x: hidden;
-  overflow-y: scroll;
-}
-
-.screen--casestudies {
-  height: 3000px;
-}
-
 :root {
   --background-color: #2c313a;
   --background-color-variant: #000000;
   --on-background: #abb2bf;
   --on-background-focus: #ffffff;
   --primary-color: #df610d;
+}
+
+#root {
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-height: 100vh;
 }
 
 body.dark {
@@ -731,6 +731,17 @@ body.light {
   --on-background: #333333;
   --on-background-focus: #111111;
   --primary-color: #157eee;
+}
+
+body {
+  font-family: "Fira Code", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.5;
+  background-color: var(--background-color);
+  color: var(--on-background);
+  transition: background-color 0.1s ease, color 0.1s ease;
 }
 
 *,
@@ -762,18 +773,6 @@ html {
     font-size: 50.5%;
     overflow-y: hidden;
   }
-}
-
-body {
-  font-family: "Fira Code", monospace;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  overflow-y: hidden;
-  font-style: normal;
-  line-height: 1.5;
-  background-color: var(--background-color);
-  color: var(--on-background);
-  transition: background-color 0.1s ease, color 0.1s ease;
 }
 
 .hashTag {

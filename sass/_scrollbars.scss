@@ -55,3 +55,9 @@ body.dark ::-webkit-scrollbar-thumb {
 body.dark ::-webkit-scrollbar-thumb:hover {
   background: var(--on-background-focus); /* Match the focus color */
 }
+
+
+
+// ::-webkit-scrollbar {
+//   display: none; /* Hide scrollbars in WebKit browsers */
+// }

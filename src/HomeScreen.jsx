@@ -4,16 +4,17 @@ import Footer from "../components/components-home-screen/Footer.jsx";
 import Landing from "../components/components-home-screen/Landing.jsx";
 import Contact from "../components/components-home-screen/Contact.jsx";
 
-
 export default function HomeScreen() {
   return (
-    <div className="body-main--screen">
-
+    // <div className="body-main--screen">
+    <>
       <Landing />
       <Quote />
       <Skills />
       <Contact />
       <Footer />
-    </div>
+    </>
+
+    // </div>
   );
 }

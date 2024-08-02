@@ -1,18 +1,19 @@
 @import "./typography";
 @import "./variables";
 @import "./scrollbars.scss";
+// @import "./components/blogpost-screen/blogpost-screen.scss";
 @import "./components/home-screen/home-screen.scss";
 @import "./components/header.scss";
 @import "./components/home-screen/landing.scss";
 @import "./components/home-screen/quote.scss";
+@import "./screens";
 @import "./components/home-screen/randomobj.scss";
 @import "./components/home-screen/contact.scss";
 @import "./components/home-screen/footer.scss";
 @import "./components/media-header.scss";
 @import "./components/home-screen/skills.scss";
 @import "./components/bottom-nav.scss";
-@import "./components/screens.scss";
-@import "./components/blogpost-screen/blogpost-screen.scss";
+// @import "./components/screens.scss";
 @import "./components/casestudies-screen/casestudies-screen.scss";
 @import "./mixin";
 
@@ -22,6 +23,16 @@
   --on-background: #abb2bf;
   --on-background-focus: #ffffff;
   --primary-color: #df610d;
+}
+
+#root {
+  // display: flex ;
+  position: relative;
+  // flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-height: 100vh;
+  // background-color: red;
 }
 
 body.dark {
@@ -39,7 +50,16 @@ body.light {
   --on-background-focus: #111111;
   --primary-color: #157eee;
 }
-
+body {
+  font-family: $font-family;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.5;
+  background-color: var(--background-color);
+  color: var(--on-background);
+  transition: background-color 0.1s ease, color 0.1s ease;
+}
 *,
 *::before,
 *::after {
@@ -68,19 +88,6 @@ html {
     // overflow-y: auto;
     overflow-y: hidden;
   }
-}
-
-body {
-  font-family: $font-family;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  overflow-y: hidden;
-
-  font-style: normal;
-  line-height: 1.5;
-  background-color: var(--background-color);
-  color: var(--on-background);
-  transition: background-color 0.1s ease, color 0.1s ease;
 }
 
 .hashTag {
